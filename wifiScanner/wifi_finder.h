@@ -1,7 +1,13 @@
-#ifndef DISPLAY_H
-#define DISPLAY_H
+#ifndef WIFI_FINDER_H
+#define WIFI_FINDER_H
 
-void getNetworks();
-void handleNetworks();
+#include <Arduino.h>
+
+struct Network {
+  String ssid;
+  int rssi;
+};
+
+void getTopNetworks(Network result[5]);
 
 #endif

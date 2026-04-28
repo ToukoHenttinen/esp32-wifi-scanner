@@ -1,19 +1,18 @@
-#include "wifi_finder.h"
 #include "display.h"
 
-TFT_eSPI tft;
+Network networks[5];
 
 void setup() {
-  tft.init();
-  tft.setRotation(0);
 
-  tft.fillScreen(TFT_BLACK);
+  initializeDisplay();
 
-  tft.setTextColor(TFT_WHITE, TFT_BLACK);
-  tft.setTextFont(2);
-  tft.setTextDatum(MC_DATUM);   // keskitys
+  networks[0] = {"WiFi_1", -40};
+  networks[1] = {"WiFi_2", -50};
+  networks[2] = {"WiFi_3", -60};
+  networks[3] = {"WiFi_4", -70};
+  networks[4] = {"WiFi_5", -80};
 
-  tft.drawString("Terve", 64, 80);
+  showNetworks(networks);
 }
 
 void loop() {
