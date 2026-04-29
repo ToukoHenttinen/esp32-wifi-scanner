@@ -4,12 +4,8 @@
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 
-struct Network {
-  String ssid;
-  int rssi;
-};
 
 void initializeDisplay();
-void showNetworks(Network networks[5]);
+void showNetworks(struct WifiNetwork* networks);
 
 #endif
