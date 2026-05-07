@@ -27,8 +27,3 @@ WifiNetwork* getNetworks(){
   return networks;
 
 }
-
-
-void handleNetworks(){
-
-}

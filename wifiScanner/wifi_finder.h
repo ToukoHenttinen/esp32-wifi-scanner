@@ -9,6 +9,5 @@ struct WifiNetwork {
 };
 
 WifiNetwork* getNetworks();
-void handleNetworks();
 
 #endif
